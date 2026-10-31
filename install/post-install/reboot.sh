@@ -1,3 +1,7 @@
+if [[ -n "${SKEIN_NO_REBOOT:-}" ]]; then
+  echo "Skein installed. A reboot is needed to finish."
+  return 0
+fi
 clear
 if [[ -n "${SKEIN_NOBARA:-}" ]]; then
   cat ~/.local/share/skein/logo.txt
